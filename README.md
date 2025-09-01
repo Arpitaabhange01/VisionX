@@ -1,6 +1,6 @@
 # VisionX - CIFAR-10 Image Classification
 
-VisionX is a sleek and interactive web application that classifies images into one of the 10 CIFAR-10 categories using a Convolutional Neural Network (CNN). Built with TensorFlow and Streamlit, it brings deep learning to life with real-time predictions, animations, and performance insights.
+VisionX is a sleek and interactive web application that classifies images into one of the 10 CIFAR-10 categories using a Convolutional Neural Network (CNN). Built with TensorFlow and Streamlit, it brings deep learning to life with real-time predictions, and performance insights.
 
 ---
 
