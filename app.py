@@ -13,15 +13,26 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 # Streamlit page configuration
 st.set_page_config(page_title="CIFAR-10 Image Classification", page_icon="🖼️", layout="wide")
 
-# Custom background color (stylish blue)
+# Custom background + text styles (light-friendly stylish blue)
 st.markdown(
     """
     <style>
         .stApp {
-            background-color: #e6f0ff;
+            background-color: #e6f0ff; /* Stylish light blue */
         }
         h1, h2, h3 {
-            color: #003366;
+            color: #003366; /* Dark blue text */
+            font-weight: bold;
+        }
+        .prediction-card {
+            padding:15px;
+            border-radius:10px;
+            background-color:#f8fbff;
+            text-align:center;
+            border: 1px solid #cce0ff;
+        }
+        .prediction-card h3 {
+            color:#003366;
         }
     </style>
     """,
@@ -43,9 +54,9 @@ def load_my_model():
 
 model = load_my_model()
 
-# Simple clean title
+# Title
 st.markdown(
-    "<h1 style='text-align:center; font-weight:bold;'>VisionX - CIFAR-10 Image Classification</h1>",
+    "<h1 style='text-align:center;'>VisionX - CIFAR-10 Image Classification</h1>",
     unsafe_allow_html=True
 )
 
@@ -73,7 +84,7 @@ with col1:
         st.image(image_file, caption='Uploaded Image', use_column_width=True)
 
 with col2:
-    if image_file and st.button("Classify Image ", key="classify_button"):
+    if image_file and st.button("Classify Image", key="classify_button"):
         img_path = f"./images/{image_file.name}"
         with open(img_path, "wb") as f:
             f.write(image_file.getbuffer())
@@ -96,8 +107,8 @@ with col2:
 
         # Stylish result card
         st.markdown(f"""
-        <div style="padding:15px; border-radius:10px; background-color:#f1f5f9; text-align:center;">
-            <h3 style="color:#003366;">Prediction Result</h3>
+        <div class="prediction-card">
+            <h3>Prediction Result</h3>
             <p style="font-size:18px;">{result_text} <br> Confidence: <b>{confidence*100:.2f}%</b></p>
         </div>
         """, unsafe_allow_html=True)
