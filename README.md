@@ -4,6 +4,12 @@ VisionX is a sleek and interactive web application that classifies images into o
 
 ---
 
+## 🔗 Live Demo
+
+👉 Try it here: [VisionX on Streamlit](https://visionx-izkwmu85sw4ccxa3kcbw94.streamlit.app/)
+
+---
+
 ## 🚀 Features
 
 - 🔍 Upload any image and get instant predictions  
@@ -45,9 +51,8 @@ Here are some previews of the project in action:
 ### 🔹 Home Page
 ![Home Page](screenshots/vision_01.png)
 
-### 🔹 Image Upload , Prediction & confidence score
+### 🔹 Image Upload, Prediction & Confidence Score
 ![Prediction](screenshots/vision_02.png)
-
 
 ---
 
