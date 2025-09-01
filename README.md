@@ -6,25 +6,25 @@ VisionX is a sleek and interactive web application that classifies images into o
 
 ## 🚀 Features
 
-- 🔍 Upload any image and get instant predictions
-- 🧠 CNN model trained on CIFAR-10 dataset
-- 📊 Confidence score and class-wise performance metrics
+- 🔍 Upload any image and get instant predictions  
+- 🧠 CNN model trained on CIFAR-10 dataset  
+- 📊 Confidence score and class-wise performance metrics  
 
 ---
 
 ## 🧠 What is CIFAR-10?
 
 CIFAR-10 is a dataset of 60,000 32×32 color images across 10 classes:
-- ✈️ Airplane
-- 🚗 Automobile
-- 🐦 Bird
-- 🐱 Cat
-- 🦌 Deer
-- 🐶 Dog
-- 🐸 Frog
-- 🐴 Horse
-- 🚢 Ship
-- 🚚 Truck
+- ✈️ Airplane  
+- 🚗 Automobile  
+- 🐦 Bird  
+- 🐱 Cat  
+- 🦌 Deer  
+- 🐶 Dog  
+- 🐸 Frog  
+- 🐴 Horse  
+- 🚢 Ship  
+- 🚚 Truck  
 
 Each class has 6,000 images, making it ideal for training image classification models.
 
@@ -32,9 +32,22 @@ Each class has 6,000 images, making it ideal for training image classification m
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Streamlit, HTML/CSS
-- **Backend**: TensorFlow, Keras
-- **Data**: CIFAR-10 via `tensorflow.keras.datasets`
+- **Frontend**: Streamlit, HTML/CSS  
+- **Backend**: TensorFlow, Keras  
+- **Data**: CIFAR-10 via `tensorflow.keras.datasets`  
+
+---
+
+## 📸 Screenshots
+
+Here are some previews of the project in action:
+
+### 🔹 Home Page
+![Home Page](screenshots/vision_01.png)
+
+### 🔹 Image Upload , Prediction & confidence score
+![Prediction](screenshots/vision_02.png)
+
 
 ---
 
