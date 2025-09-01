@@ -9,8 +9,6 @@ VisionX is a sleek and interactive web application that classifies images into o
 - 🔍 Upload any image and get instant predictions
 - 🧠 CNN model trained on CIFAR-10 dataset
 - 📊 Confidence score and class-wise performance metrics
-- 🎨 Lottie animations for engaging UI
-- 📁 Clean layout with no sidebar clutter
 
 ---
 
