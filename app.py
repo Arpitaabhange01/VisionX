@@ -11,33 +11,43 @@ import time
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 # Streamlit page configuration
-st.set_page_config(page_title="CIFAR-10 Image Classification", page_icon="🖼️", layout="wide")
+st.set_page_config(
+    page_title="CIFAR-10 Image Classification",
+    page_icon="🖼️",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-# Custom background + text styles (light-friendly stylish blue)
-st.markdown(
-    """
+# Detect Streamlit theme (light/dark) and set colors
+theme = st.get_option("theme.base")
+
+if theme == "dark":
+    bg_color = "#0e1117"   # dark background
+    text_color = "#fafafa" # light text
+    card_color = "#1e293b" # darker cards
+else:
+    bg_color = "#e6f0ff"   # light blue background
+    text_color = "#003366" # dark blue text
+    card_color = "#f1f5f9" # light cards
+
+# Apply custom CSS with theme-aware colors
+st.markdown(f"""
     <style>
-        .stApp {
-            background-color: #e6f0ff; /* Stylish light blue */
-        }
-        h1, h2, h3 {
-            color: #003366; /* Dark blue text */
-            font-weight: bold;
-        }
-        .prediction-card {
+        .stApp {{
+            background-color: {bg_color};
+            color: {text_color};
+        }}
+        h1, h2, h3, p, li {{
+            color: {text_color};
+        }}
+        .prediction-card {{
             padding:15px;
             border-radius:10px;
-            background-color:#f8fbff;
+            background-color:{card_color};
             text-align:center;
-            border: 1px solid #cce0ff;
-        }
-        .prediction-card h3 {
-            color:#003366;
-        }
+        }}
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # CIFAR-10 class names
 class_names = [
@@ -54,9 +64,9 @@ def load_my_model():
 
 model = load_my_model()
 
-# Title
+# Simple clean title
 st.markdown(
-    "<h1 style='text-align:center;'>VisionX - CIFAR-10 Image Classification</h1>",
+    "<h1 style='text-align:center; font-weight:bold;'>VisionX - CIFAR-10 Image Classification</h1>",
     unsafe_allow_html=True
 )
 
@@ -84,7 +94,7 @@ with col1:
         st.image(image_file, caption='Uploaded Image', use_column_width=True)
 
 with col2:
-    if image_file and st.button("Classify Image", key="classify_button"):
+    if image_file and st.button("Classify Image ", key="classify_button"):
         img_path = f"./images/{image_file.name}"
         with open(img_path, "wb") as f:
             f.write(image_file.getbuffer())
