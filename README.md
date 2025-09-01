@@ -37,7 +37,6 @@ Each class has 6,000 images, making it ideal for training image classification m
 - **Frontend**: Streamlit, HTML/CSS
 - **Backend**: TensorFlow, Keras
 - **Data**: CIFAR-10 via `tensorflow.keras.datasets`
-- **Animation**: Lottie via `streamlit-lottie`
 
 ---
 
@@ -45,7 +44,7 @@ Each class has 6,000 images, making it ideal for training image classification m
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/VisionX.git
+git clone https://github.com/Arpitaabhange01/VisionX.git
 cd VisionX
 
 # Install dependencies
